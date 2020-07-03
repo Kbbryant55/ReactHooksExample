@@ -1,13 +1,41 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
+import NoteApp from './components/NoteApp';
+
+
+
+// const App = (props) => {
+//   const [count, setCount] = useState(props.initialCount);
+//   const [text,setText] = useState('')
+
+//   useEffect(() => {
+//     console.log('This should only run once')
+//   },[]);
+
+//   useEffect(() => {
+//     console.log("useEffect ran")
+//     document.title = count;
+//   },[count]);
+
+//   return (
+//     <div>
+//       <p>The current {text || 'count'} it {count}</p>
+//       <button onClick={() => setCount(count + 1)}>+1</button>
+//       <button onClick={() => setCount(props.initialCount)}>reset</button>
+//       <button onClick={() => setCount(count - 1)}>-1</button>
+//       <input value={text} onChange={(e) => setText(e.target.value)}/>
+//     </div>
+//   )
+// }
+
+// App.defaultProps = {
+//   initialCount: 0
+// }
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <NoteApp />,
   document.getElementById('root')
 );
 
